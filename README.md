@@ -85,9 +85,11 @@ Each page class handles only UI interactions, while test cases define the busine
 
 ---
 
-This project is part of my QA Automation Portfolio:
-https://github.com/sumitbiddu/qa-automation-portfolio
-
 ## Author
 
 QA Automation Engineer | Selenium | Java | TestNG | POM Framework
+
+---
+
+This project is part of my QA Automation Portfolio:
+https://github.com/sumitbiddu/qa-automation-portfolio
