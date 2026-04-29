@@ -1,12 +1,18 @@
-# Page Object Model (POM) Automation Framework
+# Page Object Model (POM) Automation Framework – PHPTRAVELS
 
 ## Overview
 
 This project is a Selenium-based UI automation framework built using the Page Object Model (POM) design pattern.
 
-It automates key user flows for a sample web application (ToolsQA), including login, book search, and profile actions.
+It automates an end-to-end user flow on the PHPTRAVELS application including login, service selection, cart management, checkout, and invoice generation.
 
-The purpose of this project is to demonstrate practical knowledge of UI automation, test structuring, and reusable framework design.
+The goal of this project is to demonstrate real-world automation flow design, reusable framework structure, and maintainable test architecture.
+
+---
+
+## Application Under Test
+
+PHPTRAVELS – Client Area & Services Module
 
 ---
 
@@ -17,56 +23,68 @@ The purpose of this project is to demonstrate practical knowledge of UI automati
 - TestNG
 - Page Object Model (POM)
 - ExtentReports
-- Apache POI (Data-driven testing)
+- RemoteWebDriver
 
 ---
 
 ## Framework Structure
 
-- **pages/** → Contains Page Object classes (UI locators and actions)
-- **testcases/** → Contains TestNG test scripts
-- **wrappers/** → Reusable Selenium wrapper methods
-- **utils/** → Utility classes (Data input, reporting, etc.)
+- **pages/** → Page Object classes for each UI screen
+- **testcases/** → TestNG test scripts for end-to-end scenarios
+- **wrappers/** → Reusable Selenium wrapper methods (click, enter, verify, etc.)
+- **base configuration** → Driver and test setup handled via ProjectSpecificWrappers
+
+---
+
+## Test Flow Covered
+
+This framework automates the complete user journey:
+
+Login → Navigate to Services → Select Mobile Service → Add to Cart → Checkout → Validate Product → Complete Order → Generate Invoice
 
 ---
 
 ## Key Features
 
-- Page Object Model design for better maintainability
-- Data-driven testing using Excel
+- Page Object Model implementation for maintainability
+- End-to-end real-world user flow automation
 - Reusable wrapper methods for Selenium actions
-- ExtentReports integration for execution reporting
-- Modular and scalable test structure
+- Frame handling for reCAPTCHA interaction
+- ExtentReports integration for test execution reporting
+- Method chaining for readable test scripts
 
 ---
 
-## Test Coverage
+## Important Scenarios Covered
 
-- User login functionality
-- Book search functionality
-- Book details validation
-- Add to collection functionality
-- Profile navigation and logout flow
-
----
-
-## Automation Flow Example
-
-Login → Navigate to Book Store → Search Book → Open Book Details → Validate Information → Add to Collection → Logout
+- User login with credentials
+- Handling reCAPTCHA frame
+- Service selection (Mobile)
+- Cart validation
+- Checkout process
+- Order completion
+- Invoice generation and validation
 
 ---
 
-## QA Approach
+## Automation Approach
 
-This framework focuses on:
+The framework is designed to simulate real user behavior by chaining page actions across multiple modules.
 
-- Separating test logic from page interactions
-- Improving maintainability through reusable components
-- Supporting data-driven execution
-- Simulating real user workflows
+Each page class handles only UI interactions, while test cases define the business flow.
+
+---
+
+## QA Design Principles Used
+
+- Separation of concerns (Page vs Test logic)
+- Reusable framework components
+- Modular page structure
+- Real-world end-to-end scenario simulation
+- Frame handling and dynamic UI interaction
 
 ---
 
 ## Author
 
-QA Automation Engineer | Selenium | Java | TestNG
+QA Automation Engineer | Selenium | Java | TestNG | POM Framework
